@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import TurndownService from "turndown";
 
 export default function FormattedOutput() {
     const [isCopied, setIsCopied] = useState(false)
     const [content, setContent] = useState('')
 
-    const formattedText = content.replaceAll(/[;,]/g, '\n')
+    const turndownService = new TurndownService()
 
     useEffect(() => {
         setIsCopied(false)
@@ -42,8 +43,10 @@ export default function FormattedOutput() {
             const clipHTML = await blob.text();
             console.log(clipHTML)
 
+            const markdown = turndownService.turndown(clipHTML)
+
             // Display the HTML content on the page
-            setContent(clipHTML)
+            setContent(markdown)
         } catch (err) {
             console.error('Failed to read clipboard contents: ', err);
         }
