@@ -22,8 +22,7 @@ export default function Home() {
       <main
         className={`flex py-2 px-24 ${inter.className}`}
       >
-        <TextInput content={content} handleChange={handleChange} />
-        <FormattedOutput content={content} />
+        <FormattedOutput id="output" content={content} />
       </main>
     </>
 
