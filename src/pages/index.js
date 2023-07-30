@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
-import TextInput from '@/components/TextInput'
 import FormattedOutput from '@/components/FormattedOutput'
 
 const inter = Inter({ subsets: ['latin'] })
