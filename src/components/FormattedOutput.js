@@ -12,7 +12,7 @@ export default function FormattedOutput() {
     }, [content])
 
     function handleCopyClick() {
-        navigator.clipboard.writeText(formattedText)
+        navigator.clipboard.writeText(content)
         setIsCopied(true)
     }
 
