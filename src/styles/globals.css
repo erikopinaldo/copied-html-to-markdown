@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 section {
-    margin: 20px;
+    margin: 0 auto;
 }
 
 h1 {
