@@ -29,20 +29,15 @@ export default function FormattedOutput() {
             // Request access to the clipboard with the "text/html" format
             const data = await navigator.clipboard.read([{ type: 'text/html' }]);
 
-            console.log(data)
-
             // Get the first item (index 0) from the clipboard data array
             const clipboardItem = data[0];
 
             // Get the content as a Blob
             const blob = await clipboardItem.getType('text/html');
 
-            console.log(blob)
-
             // Read the Blob content as text
             const clipHTML = await blob.text();
-            console.log(clipHTML)
-
+            
             const markdown = turndownService.turndown(clipHTML)
 
             // Display the HTML content on the page
