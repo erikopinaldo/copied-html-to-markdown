@@ -55,7 +55,7 @@ export default function FormattedOutput() {
     return (
         <section>
             <button
-                className={`bg-blue-500 rounded mr-2 py-2 px-4 my-6 text-white font-bold ${content.length === 0 ? 'opacity-50' : ''}`}
+                className={`bg-blue-500 rounded mr-2 py-2 px-4 my-6 text-white font-bold`}
                 onClick={() => handlePaste()}>Paste
             </button>
             {/* <h2 className="my-4 inline font-bold mr-4">Output:</h2> */}
